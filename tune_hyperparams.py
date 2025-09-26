@@ -41,10 +41,6 @@ def get_param_combos():
 def annualize_pnl_pct(pnl_pct, period):
     if period == "2y":
         T = 0.5
-    #elif period == "2y":
-    #    T = 2
-    #else:
-     #   T = 1
     annualized_PNL_dec = (1 + pnl_pct / 100) ** (1/T) - 1
     return annualized_PNL_dec * 100
 
